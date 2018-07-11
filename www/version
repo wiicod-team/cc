@@ -1,0 +1,18 @@
+CC-1.0.4 04/06/2018
+- Annulation d'une commande
+- recapitulatif de la commande
+- validation d'une commande en 3 etapes (client, cuisne, caisse)
+- correction des bugs : login
+- ajout nom du vendeur
+
+CC-1.0.3
+- correction du filtre sur le chiffre d'affaire : integration du statut 1
+
+CC-1.0.2 30/05/2018
+- Correction des bugs
+- Ajout de l'interface caisse : validation d'une facture
+- consultation du pdf de la facture
+- introduction des hide sur les composants non vendeur
+
+CC-1.0.1 28/05/18
+Version initiale

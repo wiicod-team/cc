@@ -1,0 +1,54 @@
+
+<ion-view view-title="Stock de : {{stocks[0].depot.name}}">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="iteem">
+        <div class="row">
+          <div class="col-80">
+
+          </div>
+          <div class="col-20">
+            <button class="button button-small button-primary" ng-click="refresh()"><strong>Actualiser</strong></button>
+          </div>
+        </div>
+      </div>
+      <div class="item item-divider">
+        <div class="row">
+          <div class="col-50">
+            Produit
+          </div>
+          <div class="col-20">
+            <span class="pull-right">Unité</span>
+          </div>
+          <div class="col-20">
+            <span class="pull-right">Qté</span>
+          </div>
+        </div>
+      </div>
+      <a class="item"
+         ng-repeat="s in stocks |orderBy :'-product_saletype.product.name':true"
+         style="padding: 5px 16px;"
+        >
+        <div class="row">
+          <div class="col-50">
+            {{s.product_saletype.product.name}}
+          </div>
+          <div class="col-20">
+            <span class="pull-right">{{s.product_saletype.unit}}</span>
+          </div>
+          <div class="col-20">
+            <span class="pull-right">{{s.quantity}}</span>
+          </div>
+        </div>
+
+
+
+      </a>
+
+    </div>
+
+
+
+  </ion-content>
+
+</ion-view>

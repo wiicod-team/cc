@@ -1,0 +1,48 @@
+{
+	"about_comp": {},
+	"home_comp": {
+		"home": "Accueil",
+		"movieplace_choice": "Choix de la salle",
+		"heart_stroke": "En avant première",
+		"feature_week": "A l'affiche cette semaine",
+		"feature_next_week": "A l'affiche semaine prochaine"
+	},
+	"login_comp": {
+		"authentification": "Authentification",
+		"password": "Mot de passe",
+		"email": "Email",
+		"login": "Connexion",
+		"signin": "M'inscire"
+	},
+	"login_modal_comp": {
+		"authentification": "Authentification",
+		"password": "Password",
+		"email": "Email",
+		"login": "Connexion",
+		"signin": "Sign in"
+	},
+	"suggestions_comp": {
+		"suggestion": "Suggestions",
+		"content": "Contenu de votre suggestion",
+		"success_title": "Suggestion enregistrée",
+		"error_title": "Echec de l'enregistrement",
+		"success_message": "Merci pour votre contribution",
+		"error_message": "Merci de réessayer",
+		"email": "Email",
+		"save": "Enregistrer"
+	},
+	"tabs_comp": {
+		"home": "Accueil",
+		"movieplace_choice": "Choix de la salle",
+		"heart_stroke": "En avant première",
+		"feature_week": "A l'affiche cette semaine",
+		"feature_next_week": "A l'affiche semaine prochaine"
+	},
+	"command_list_comp": {
+		"home": "Accueil",
+		"movieplace_choice": "Choix de la salle",
+		"heart_stroke": "En avant première",
+		"feature_week": "A l'affiche cette semaine",
+		"feature_next_week": "A l'affiche semaine prochaine"
+	}
+}

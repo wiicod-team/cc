@@ -1,0 +1,49 @@
+
+<ion-view view-title="Vos objectifs">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="iteem">
+        <div class="row">
+          <div class="col-80">
+
+          </div>
+          <div class="col-20">
+            <button class="button button-small button-primary" ng-click="refresh()"><strong>Actualiser</strong></button>
+          </div>
+        </div>
+      </div>
+      <div class="item item-divider">
+        <div class="row">
+          <div class="col-67">
+            Catégorie
+          </div>
+          <div class="col-33">
+            <span class="pull-right">Objectif</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="item"
+         ng-repeat="o in targets"
+         style="padding: 5px 16px;"
+        >
+        <div class="row">
+          <div class="col-67">
+            {{o.category.name}}
+          </div>
+          <div class="col-33">
+            <span class="pull-right">{{o.value |priceFormat}}</span>
+          </div>
+        </div>
+
+
+
+      </a>
+
+    </div>
+
+
+
+  </ion-content>
+
+</ion-view>

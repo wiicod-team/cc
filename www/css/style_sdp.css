@@ -1,0 +1,128 @@
+/* Empty. Add your own CSS if you like */
+ion-content, .pane{
+  background: #eee;
+}
+
+.pull-right{
+  float: right;
+}
+
+.pull-left{
+  float: left;
+}
+
+.menu-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #0055a0;
+  position: fixed;
+  bottom: 65px;
+  right: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.42, 0, 0, 1);
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+}
+.menu-button:hover {
+  background: #000;
+  color: #0055a0;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+.form-signin {
+  max-width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 3px solid #0055a0;
+  border-left:none;
+  border-right:none;
+}
+
+
+#tickets form .list{
+  background: transparent;
+}
+#tickets .item-input{
+  padding:6px 5px 5px 5px;
+  border:none;
+  border-bottom:1px solid #0055a0;
+}
+
+#tickets input{
+  color:#55606e;
+  padding: 2px;
+  background: transparent;
+  text-align: center;
+}
+
+#tickets form div.item{
+  border:none;
+  background: transparent;
+}
+
+.button.button-primary{
+  background: #fff;
+  color:#0055a0;
+}
+
+.navbar, .navbar.navbar-default,.button-group-raised .button.button-primary{
+  background: #000 !important;
+  color:#0055a0;
+}
+
+.button.button-primary:hover,.button.button-primary:focus{
+  background: #0055a0 !important;
+  color: #000;
+}
+
+.button.button-danger{
+  background: #0055a0 !important;
+  color: #fff;
+}
+
+.button-default{
+  background: #0055a0 !important;
+  color: #fff;
+}
+.button-default:hover{
+  background: #fff !important;
+  color: #0055a0;
+}
+
+
+.item.active{
+
+}
+
+.list.card{
+  margin-top: 5px;
+}
+
+
+.item-divider{
+  background: #0055a0;
+  color:#fff;
+}
+
+.bar.bar-stable, .tabs{
+  background: #fff !important;
+  color: #0055a0;
+
+}
+
+.bar.bar-stable .title{
+  font-weight: bold;
+}
+
+.red-value{
+  color:#0055a0;
+}
+
+.gold-value{
+  color: #55606e;
+}

@@ -1,0 +1,44 @@
+
+<ion-view view-title="Clients">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="iteem">
+        <div class="row">
+          <div class="col-80">
+            <div class="hide">
+              <strong> Statut :</strong> <span class="red-value">En attente</span> - <span class="gold-value">A payer</span> - <strong>Payée</strong>
+            </div>
+          </div>
+          <div class="col-20">
+            <button class="button button-small button-primary" ng-click="refresh()"><strong>Actualiser</strong></button>
+          </div>
+        </div>
+      </div>
+
+      <a class="item"
+         ng-repeat="c in clients |orderBy :'-name':true"
+         ui-sref="app.customer-detail({id:c.id})"
+         style="padding: 5px 16px;"
+        >
+        <div class="row">
+          <div class="col-75">
+            {{c.name}}
+          </div>
+          <div class="col-20">
+            <span class="pull-right">{{c.town.name}}</span>
+          </div>
+        </div>
+
+
+
+      </a>
+
+    </div>
+
+
+
+  </ion-content>
+  <div class="menu-button hide"  ui-sref="app.command-add({depot:user.seller.depot.id,saletype:saletypes})">
+    <i class="fa fa-plus"></i>
+  </div>
+</ion-view>

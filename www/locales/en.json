@@ -1,0 +1,57 @@
+{
+	"about_comp": {
+		"suggestion": "Suggestions",
+		"content": "Content of your suggestion",
+		"success_title": "Saved suggestion",
+		"error_title": "Failed to save",
+		"success_message": "Thank you for your contribution",
+		"error_message": "Please try again",
+		"email": "Email",
+		"save": "Save"
+	},
+	"home_comp": {
+		"home": "Home",
+		"movieplace_choice": "Movie Theatre choice",
+		"heart_stroke": "In preview",
+		"feature_week": "Featured this week",
+		"feature_next_week": "Featured this next week"
+	},
+	"login_comp": {
+		"authentification": "Authentification",
+		"password": "Mot de passe",
+		"email": "Email",
+		"login": "Connexion",
+		"signin": "M'inscrire"
+	},
+	"login_modal_comp": {
+		"authentification": "Authentification",
+		"password": "Mot de passe",
+		"email": "Email",
+		"login": "Connexion",
+		"signin": "M'inscrire"
+	},
+	"suggestions_comp": {
+		"suggestion": "Suggestions",
+		"content": "Content of your suggestion",
+		"success_title": "Saved suggestion",
+		"error_title": "Failed to save",
+		"success_message": "Thank you for your contribution",
+		"error_message": "Please try again",
+		"email": "Email",
+		"save": "Save"
+	},
+	"tabs_comp": {
+		"home": "Home",
+		"movieplace_choice": "Movie Theatre choice",
+		"heart_stroke": "In preview",
+		"feature_week": "Featured this week",
+		"feature_next_week": "Featured this next week"
+	},
+	"command_list_comp": {
+		"home": "Home",
+		"movieplace_choice": "Movie Theatre choice",
+		"heart_stroke": "In preview",
+		"feature_week": "Featured this week",
+		"feature_next_week": "Featured this next week"
+	}
+}

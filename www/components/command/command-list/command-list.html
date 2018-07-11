@@ -1,0 +1,48 @@
+
+<ion-view view-title="Commandes">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="iteem">
+        <div class="row">
+          <div class="col-80">
+            <div class="">
+              <strong> Statut :</strong> <span class="red-value">En attente</span> - <span class="gold-value">A payer</span> - <strong>Payée</strong>
+            </div>
+          </div>
+          <div class="col-20">
+            <button class="button button-small button-primary" ng-click="refresh()"><strong>Actualiser</strong></button>
+          </div>
+        </div>
+      </div>
+      <div ng-repeat="b in bills |orderBy :'-date':false">
+        <div class="item item-divider">
+          <span class="pull-left">{{b.long_time}}</span>
+          <span class="pull-right">{{b.somme|priceFormat}} Fcfa</span>
+        </div>
+        <a class="item" ng-repeat="f in b.factures" ui-sref="app.command-detail({id:f.id})" style="padding: 5px">
+          <div class="row">
+            <div class="col-75">
+             #{{f.id}}
+              <strong ng-class="{'red-value':f.status=='waiting_customer_approval','gold-value':f.status=='waiting_cashier_approval'}">{{f.customer.name}}</strong>
+
+            </div>
+            <div class="col-50 hide">
+              (#{{f.seller.id}}){{f.customer.name}}
+            </div>
+            <div class="col-25">
+              <span class="pull-right">{{f.amount|priceFormat}} Fcfa</span>
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+
+
+  </ion-content>
+  <div class="menu-button" ng-if="can('command.add')" ui-sref="app.command-add({depot:user.seller.depot.id,saletype:saletypes})">
+    <i class="fa fa-plus"></i>
+  </div>
+</ion-view>

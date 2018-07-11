@@ -1,0 +1,47 @@
+
+<ion-view view-title="Recapitulatif de la commande ">
+  <ion-content class="padding">
+    <div class="list card">
+
+      <div class="item item-divider">
+        <span class="pull-left">Facture</span>
+        <span class="pull-right">#</span>
+      </div>
+
+      <a class="item">
+        <span class="pull-left">Client</span>
+        <span class="pull-right">{{memo.bill.customer_name}}</span>
+      </a>
+      <a class="item">
+        <span class="pull-left">Statut</span>
+        <span class="pull-right red-value">En attente visa du client</span>
+      </a>
+
+      <div class="item item-divider">
+        <span class="pull-left">Produits</span>
+        <strong class="pull-right">{{memo.commande.total|priceFormat}} Fcfa</strong>
+      </div>
+      <a  class="item" ng-repeat="b in memo.commande.produits">
+        <span class="pull-left">{{b.product_saletype.product.name|limitTo:20}} - {{b.product_saletype.unit}}({{b.command_quantity}})</span>
+        <span class="pull-right">{{b.product_saletype.price|priceFormat}} Fcfa</span>
+      </a>
+
+    </div>
+
+    <div class="list">
+      <div class="item" style="padding:0;">
+        <div class="button-bar" style="margin-bottom: 5px">
+          <a href="" class="class button button-default"  ng-click="buy()">
+            Espèce
+          </a>
+        </div>
+        <div class="button-bar">
+          <a href="" class="class button button-default">
+            Orange money
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

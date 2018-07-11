@@ -1,0 +1,38 @@
+<ion-view view-title="{{client.name}}" onscroll="false">
+  <ion-content id="search" class="padding" overflow-scroll="false">
+
+    <div class="list card">
+
+      <div class="item">
+        <h2>{{client.name}}</h2>
+        <p><span translate>A</span> <span class="dark-red">{{distance}}</span> <span translate>de vous</span> | <span style="color: #c00;"> {{client.town.name}}</span></p>
+      </div>
+
+      <div class="item item-body">
+        <div id="map">
+          <ng-map zoom="13"
+                  center="{{position}}"
+                  style="height:60%" >
+            <directions
+              draggable="false"
+              map-type-id="SATELLITE"
+              panel="directions-panel"
+              travel-mode="DRIVING"
+              origin="{{lat}}, {{lng}}"
+              destination="{{client.latitude}}, {{client.longitude}}">
+            </directions>
+            <custom-marker id="start"
+                           position="{{lat}}, {{lng}}">
+              <div class="my1" translate>Vous</div>
+            </custom-marker>
+            <custom-marker id="end"
+                           position="{{client.latitude}}, {{client.longitude}}">
+              <div class="my2" translate>{{client.name}}</div>
+            </custom-marker>
+          </ng-map>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
