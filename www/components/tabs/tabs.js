@@ -9,6 +9,7 @@ app
 
     $scope.logout = function () {
       Auth.logout().then(function () {
+        window.cache.clear();
         $state.go('auth.login');
       });
     }

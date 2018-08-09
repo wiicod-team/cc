@@ -4,12 +4,12 @@
 
 app
 
-  .controller("CommandCheckCtrl",function($scope,Bills,ToastApi,BillProductSaleTypes,$ionicLoading,$state,$timeout,$rootScope){
+  .controller("CommandCheckCtrl",function($scope,Bills,ToastApi,BillProductSaleTypes,$ionicLoading,$state,$timeout,$rootScope,OmPayment){
     var memo=$rootScope.memo;
     console.log(memo);
     $scope.memo=memo;
 
-    $scope.buy=function(){
+    $scope.buy=function(type){
 
       show($ionicLoading);
       var bill=memo.bill;
@@ -19,6 +19,7 @@ app
       Bills.post(bill).then(function(f){
         //console.log(f);
         f.id= f.data.id;
+        $scope.bill= f.data;
         // enregistrement du bill_product_saletype
         var i=0;
         var temp=memo.commande.produits;
@@ -48,4 +49,9 @@ app
         console.log(q);
       });
     };
+
+    $scope.buyOM=function(){
+      OmPayment.buy($scope.bill.id);
+    }
+
   });

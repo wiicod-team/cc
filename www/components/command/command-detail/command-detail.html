@@ -41,13 +41,13 @@
       <div class="item" style="padding:0;">
 
         <div class="button-bar">
-          <a href="{{bills[0].bill.pdf_before_customer}}" ng-if="statut=='waiting_cashier_approval' || statut=='waiting_customer_approval'" class="class button button-primary">
+          <a href="{{bills[0].bill.pdf_before_customer}}" ng-if="statut=='waiting_cashier_approval' || statut=='waiting_customer_approval' && bills[0].bill.pdf_before_customer!=undefined" class="class button button-primary">
             PDF
           </a>
-          <a  href="{{bills[0].bill.pdf_after_cashier}}" ng-if="statut=='paided'" class="class button button-primary">
+          <a  href="{{bills[0].bill.pdf_after_cashier}}" ng-if="statut=='paided' && bills[0].bill.pdf_after_cashier!=undefined" class="class button button-primary">
             PDF
           </a>
-          <a href="" class="class button button-default"
+          <a class="class button button-default"
              ng-if="statut=='waiting_cashier_approval'"
              ng-click="cashIn(bills[0].bill)">
             Encaisser

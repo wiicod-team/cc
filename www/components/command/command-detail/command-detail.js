@@ -4,7 +4,7 @@
 
 app
 
-  .controller("CommandDetailCtrl",function($scope,Bills,$stateParams,BillProductSaleTypes,$ionicLoading,Cashiers,Auth,$cordovaInAppBrowser,$filter,ToastApi,AclService){
+  .controller("CommandDetailCtrl",function($scope,Bills,$stateParams,BillProductSaleTypes,$ionicLoading,Cashiers,Auth,$state,$cordovaInAppBrowser,$filter,ToastApi,AclService,$cookies){
     show($ionicLoading);
     $scope.can = AclService.can;
     var id=$stateParams.id;
@@ -18,12 +18,13 @@ app
     if(Auth.isLogged()==true){
       Auth.getContext().then(function(data){
         $scope.user=data;
-        Cashiers.getList({depot_id:1}).then(function(data){
+        Cashiers.getList({depot_id:data.seller.depot_id}).then(function(data){
           console.log(data);
           angular.forEach(data,function(v,k){
             if($scope.user.id== v.user_id){
               $scope.can_sign=true;
               $scope.cashier_id= v.id;
+              console.log($scope.cashier_id);
               hide($ionicLoading);
             }
             else{
@@ -49,21 +50,10 @@ app
     };
 
     $scope.cashIn=function(b){
+      $cookies.putObject("bill",b);
       // route pour la validation du ticket
-      console.log(b.id);
-      Bills.getList({"should_paginate":false}).then(function (data) {
-        var bill=$filter('filter')(data,{id: b.id},true)[0];
-        console.log(data,bill);
-        bill.status=3;
-        bill.cashier_id=$scope.cashier_id;
-        bill.put().then(function(f){
-          console.log("update",f);
-          $scope.statut= f.status;
-          ToastApi.success({msg:"Commande soldée"})
-        },function(q){
-          console.log(q);
-        });
-      })
+      console.log(b.id,$scope.cashier_id,$cookies.getObject("bill"));
+      $state.go("app.command-payment",{bill_id: b.id,cashier_id:$scope.cashier_id});
     };
 
     Bills.getList({

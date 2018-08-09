@@ -29,7 +29,7 @@
           >
           <div class="row">
             <div class="col-75" ng-click="addProduct(item)">
-              {{item.product_saletype.product.name|limitTo:30}} - {{item.product_saletype.unit}}
+              {{item.product_saletype.product.name|limitTo:20}} - {{item.product_saletype.unit}}
               <span ng-if="item.command_quantity>0">({{item.command_quantity|priceFormat}})</span>
             </div>
             <div class="col-20" ng-click="addProduct(item)">

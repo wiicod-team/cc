@@ -99,6 +99,15 @@ config.config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('app.command-payment', {
+      url: '/command-payment/:bill_id/:cashier_id',
+      views: {
+        'menuContent': {
+          templateUrl: 'command/command-payment/command-payment.html',
+          controller: 'CommandPaymentCtrl'
+        }
+      }
+    })
     .state('app.stock', {
       url: '/stock/:depot_id',
       views: {

@@ -12,7 +12,7 @@ service
         if(angular.isDefined(factory.token)){
           defer.resolve(factory.token);
         }else{
-          API.one('buy_ticket/get_token').get().then(function (data) {
+          API.one('buy_bill/get_token').get().then(function (data) {
             factory.token = data.data.token;
             BraintreePlugin.initialize(factory.token,
               function () {
@@ -65,7 +65,7 @@ service
 
               var p = _.filter(data.paymentmethods, function(d) { return d.code == 'pa' })[0];
               data.paymentmethod_id = p.id;
-              API.service('buy_ticket/buy').post(data).then(function(d){
+              API.service('buy_bill/buy').post(data).then(function(d){
                 console.log(d);
                 defer.resolve(d);
               }, function(err) {
@@ -74,7 +74,7 @@ service
             }else{
               var p = _.filter(data.paymentmethods, function(d) { return d.code == 'ca' })[0];
               data.paymentmethod_id = p.id;
-              API.service('buy_ticket/buy').post(data).then(function(d){
+              API.service('buy_bill/buy').post(data).then(function(d){
                 console.log(d);
                 defer.resolve(d);
               }, function(err) {
@@ -132,13 +132,13 @@ service
         return q.promise;
       },
 
-      buy: function (schedule_id) {
+      buy: function (bill_id) {
         var q = $q.defer();
         if(factory.api_data&&factory.api_data.payment_url){
           var d = factory.api_data;
           factory.open(factory.api_data.payment_url).then(function (da) {
             console.log('da',da)
-          /*  API.service('buy_ticket/get_om_ticket').get(d.notif_token).then(function(ti){
+          /*  API.service('buy_bill/get_om_ticket').get(d.notif_token).then(function(ti){
               console.log(ti);
               q.resolve(ti);
             },function (err) {
@@ -146,12 +146,12 @@ service
             });*/
           });
         }else{
-          API.service('buy_ticket/get_om_url').get(schedule_id).then(function(rep){
+          API.service('buy_bill/get_om_url').get(bill_id).then(function(rep){
             var d = rep.data;
             factory.api_data=d;
             factory.open(factory.api_data.payment_url).then(function (da) {
               console.log('da',da)
-             /* API.service('buy_ticket/get_om_ticket').get(d.notif_token).then(function(ti){
+             /* API.service('buy_bill/get_om_ticket').get(d.notif_token).then(function(ti){
                 console.log(ti);
                 q.resolve(ti);
               },function (err) {

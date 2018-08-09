@@ -31,7 +31,7 @@
         >
         <div class="row">
           <div class="col-50">
-            {{s.product_saletype.product.name}}
+            {{s.product_saletype.product.name |limitTo : 17}}
           </div>
           <div class="col-20">
             <span class="pull-right">{{s.product_saletype.unit}}</span>

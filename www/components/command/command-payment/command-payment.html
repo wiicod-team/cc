@@ -1,0 +1,39 @@
+
+<ion-view view-title="Mode de paiement">
+  <ion-content class="padding">
+    <div class="list card">
+
+      <div class="item item-divider">
+        <span class="pull-left">Facture</span>
+        <span class="pull-right"># {{bill.id}}</span>
+      </div>
+
+      <a class="item">
+        <span class="pull-left">Client</span>
+        <span class="pull-right">{{bill.customer.name}}</span>
+      </a>
+      <a class="item">
+        <span class="pull-left">Montant à payer</span>
+        <span class="pull-right red-value">{{bill.amount|priceFormat}} Fcfa</span>
+      </a>
+
+    </div>
+
+    <div class="list">
+      <div class="item" style="padding:0; background: transparent;border: none">
+        <div class="button-bar">
+          <a href="" class="class button button-default"  ng-click="buyCash()">
+            Espèce
+          </a>
+        </div>
+        <br>
+        <div class="button-bar">
+          <a href="" class="class button button-primary" ng-click="buyOM()">
+            Orange money
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
