@@ -24,19 +24,35 @@ app
       else{
         bill.paymentmethod_id=0;
       }
-      /*bill.put().then(function(f){
+      bill.put().then(function(f){
         console.log("update",f);
         $scope.statut= f.status;
         ToastApi.success({msg:"Commande soldée"})
       },function(q){
         console.log(q);
-      });*
+      });
     });*/
 
 
 
     $scope.buyOM=function(){
       OmPayment.buy($scope.bill.id);
+    }
+
+    $scope.buyCash=function(){
+      Bills.getList({"should_paginate":false}).then(function (data) {
+        var bill=$filter('filter')(data,{id: bill_id})[0];
+        //console.log(data,bill,bill_id);
+        bill.status=3;
+        bill.cashier_id=cashier_id;
+        bill.put().then(function(f){
+          //console.log("update",f);
+          $scope.statut= f.status;
+          ToastApi.success({msg:"Commande soldée"})
+        },function(q){
+          console.log(q);
+        });
+      });
     }
 
   });

@@ -31,7 +31,7 @@
       </div>
       <a  class="item" ng-repeat="b in bills">
         <span class="pull-left">{{b.product_saletype.product.name|limitTo:20}} -{{b.product_saletype.unit}} ({{b.quantity}}) </span>
-        <span class="pull-right">{{b.product_price_was|priceFormat}} Fcfa</span>
+        <span class="pull-right">{{b.product_price_was*b.quantity|priceFormat}} Fcfa</span>
       </a>
 
     </div>

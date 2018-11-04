@@ -23,7 +23,7 @@
       </div>
       <a  class="item" ng-repeat="b in memo.commande.produits">
         <span class="pull-left">{{b.product_saletype.product.name|limitTo:20}} - {{b.product_saletype.unit}}({{b.command_quantity}})</span>
-        <span class="pull-right">{{b.product_saletype.price|priceFormat}} Fcfa</span>
+        <span class="pull-right">{{b.product_saletype.price*b.command_quantity|priceFormat}} Fcfa</span>
       </a>
 
     </div>

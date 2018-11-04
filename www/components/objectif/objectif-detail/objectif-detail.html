@@ -1,0 +1,22 @@
+
+<ion-view view-title="Statistique de l'objectif">
+  <ion-content class="padding">
+
+    <div class="card">
+      <div class="mu">
+        <h4>
+          {{category_name}}
+        </h4>
+        <h3>
+          <span class="gold-value">{{realisation |priceFormat}}</span> ({{(realisation/o.value)*100|limitTo:4}}%)
+        </h3>
+        Objectif :  <strong>{{o.value|priceFormat}}</strong> Fcfa
+        <div class="divider"></div>
+      </div>
+    </div>
+
+
+
+  </ion-content>
+
+</ion-view>

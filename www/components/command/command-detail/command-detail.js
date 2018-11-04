@@ -10,7 +10,7 @@ app
     var id=$stateParams.id;
     BillProductSaleTypes.getList({bill_id:id,_includes:'product_saletype.product,bill.customer,bill.seller.user,bill.cashier.user'}).then(function(data){
       $scope.bills=data;
-      console.log(data);
+      console.log(data,"da");
       $scope.statut=data[0].bill.status;
     });
     $scope.can_sign=false;
@@ -19,7 +19,7 @@ app
       Auth.getContext().then(function(data){
         $scope.user=data;
         Cashiers.getList({depot_id:data.seller.depot_id}).then(function(data){
-          console.log(data);
+          //console.log(data,"data");
           angular.forEach(data,function(v,k){
             if($scope.user.id== v.user_id){
               $scope.can_sign=true;

@@ -4,13 +4,13 @@
 
 app
 
-  .controller("TabsCtrl",function($scope,$state,Auth){
+  .controller("TabsCtrl",function($scope,$state,Auth,$ionicHistory){
     $scope.state=$state.current.name;
 
     $scope.logout = function () {
       Auth.logout().then(function () {
-        window.cache.clear();
         $state.go('auth.login');
+        $ionicHistory.clearCache()
       });
     }
   });

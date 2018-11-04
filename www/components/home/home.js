@@ -30,7 +30,7 @@ app
       // verifie d abord si un seller
 
       // calcul du chiffre d'affaire de la journée
-      Bills.getList({seller_id:$scope.user.seller.id,"status-bt":"1,3","created_at-bt":today}).then(function(f){
+      Bills.getList({seller_id:$scope.user.seller.id,"status-bt":"1,4","created_at-bt":today}).then(function(f){
         $scope.ca= _.reduce(f,function(memo, num){
           return memo+num.amount;
         },0);

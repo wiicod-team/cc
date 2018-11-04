@@ -25,6 +25,7 @@
 
       <a class="item"
          ng-repeat="o in targets"
+         ui-sref="app.objectif-detail({user_id:user_id,category_id:o.category.id,category_name:o.category.name})"
          style="padding: 5px 16px;"
         >
         <div class="row">

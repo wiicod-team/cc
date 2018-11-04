@@ -117,12 +117,21 @@ config.config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
-    .state('app.objectif', {
-      url: '/objectif/:user_id',
+    .state('app.objectif-list', {
+      url: '/objectif-list/:user_id',
       views: {
         'menuContent': {
-          templateUrl: 'objectif/objectif.html',
-          controller: 'ObjectifCtrl'
+          templateUrl: 'objectif/objectif-list/objectif-list.html',
+          controller: 'ObjectifListCtrl'
+        }
+      }
+    })
+    .state('app.objectif-detail', {
+      url: '/objectif-detail/:user_id/:category_id/:category_name',
+      views: {
+        'menuContent': {
+          templateUrl: 'objectif/objectif-detail/objectif-detail.html',
+          controller: 'ObjectifDetailCtrl'
         }
       }
     })

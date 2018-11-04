@@ -8,6 +8,7 @@ config
         url: 'http://localhost:3000/',
         //apiEndpoint:'http://sv.slim.local/api'
         apiEndpoint:'http://cashandcarry-bvs.xs7ufxmfag.us-east-1.elasticbeanstalk.com/api'// test
+        //apiEndpoint:'http://192.168.100.120/api'// test
 
     })
     .constant('APP_KEY', {

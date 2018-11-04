@@ -4,7 +4,7 @@
 
 app
 
-  .controller("CustomerListCtrl",function($scope,Bills,InfiniteLoad,Auth,Depots,$ionicLoading,Customers,AclService,$rootScope,Sellers){
+  .controller("CustomerListCtrl",function($scope,Bills,InfiniteLoad,Auth,Depots,$ionicLoading,Customers,AclService,$rootScope,Sellers,$state){
     show($ionicLoading);
     $scope.saletypes=$rootScope.saletypes;
     $scope.can = AclService.can;
@@ -18,7 +18,8 @@ app
       })
     }
     else{
-      console.log("not logged")
+      console.log("not");
+      $state.go("auth.login");
     }
 
     $scope.refresh=function(){

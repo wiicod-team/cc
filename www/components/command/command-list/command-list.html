@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-80">
             <div class="">
-              <strong> Statut :</strong> <span class="red-value">En attente</span> - <span class="gold-value">A payer</span> - <strong>Payée</strong>
+              <strong> Statut :</strong> <span class="red-value">En attente de paiement</span> - <strong>Payée</strong>
             </div>
           </div>
           <div class="col-20">
@@ -23,7 +23,7 @@
           <div class="row">
             <div class="col-75">
              #{{f.id}}
-              <strong ng-class="{'red-value':f.status=='waiting_customer_approval','gold-value':f.status=='waiting_cashier_approval'}">{{f.customer.name}}</strong>
+              <strong ng-class="{'red-value':f.status=='waiting_payment'}">{{f.customer.name}}</strong>
 
             </div>
             <div class="col-50 hide">

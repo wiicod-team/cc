@@ -3,9 +3,10 @@
  */
 
 app
-  .controller("ObjectifCtrl",function($scope,Auth,$stateParams,SaleTargets,ToastApi,Sellers,$ionicLoading,$state,$filter,$rootScope){
+  .controller("ObjectifListCtrl",function($scope,Auth,$stateParams,SaleTargets,ToastApi,Sellers,$ionicLoading,$cookies,$filter,$rootScope){
     show($ionicLoading);
     var user_id=$stateParams.user_id;
+    $scope.user_id=user_id;
 
     $scope.refresh=function(){
       var option={

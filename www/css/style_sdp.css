@@ -70,6 +70,11 @@ ion-content, .pane{
   color:#0055a0;
 }
 
+.mu h4{
+  background: #0055a0 !important;
+  color: #fff !important;
+}
+
 .navbar, .navbar.navbar-default,.button-group-raised .button.button-primary{
   background: #000 !important;
   color:#0055a0;
@@ -77,7 +82,7 @@ ion-content, .pane{
 
 .button.button-primary:hover,.button.button-primary:focus{
   background: #0055a0 !important;
-  color: #000;
+  color: #fff;
 }
 
 .button.button-danger{
