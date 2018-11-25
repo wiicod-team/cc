@@ -1,9 +1,7 @@
 <ion-view view-title="Suggestion">
   <ion-content class="padding">
     <form ng-submit="saveSuggestion(s)" class="form-login">
-      <div style="padding: 10px;padding-top: 0;margin-bottom:1%">
-        <img src="img/cc2.png" alt="" class="logo_2" style="height: 40px; width:100%">
-      </div>
+
       <div class="list list-inset" style="margin-top:0">
         <label class="item item-input item-stacked-label hide">
           <span class="input-label" translate>Email</span>
@@ -11,11 +9,11 @@
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label" translate>Contenu de votre suggestion</span>
-          <textarea style="min-height: 200px; resize: vertical" ng-model="s.content" placeholder="Contenu de votre suggestion"></textarea>
+          <textarea style="min-height: 200px; resize: vertical" ng-model="s.content"></textarea>
         </label>
 
         <div class="item" style="padding-top: 1px;padding-bottom: 1px">
-          <button type="submit" class="button button-block button-dark" translate>
+          <button type="submit" class="button button-block button-default" translate>
             Enregistrer
           </button>
         </div>

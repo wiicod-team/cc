@@ -69,6 +69,7 @@ function charger_factures(Bills,$scope,options,$ionicLoading){
 
     var tb= _.groupBy(data,'date');
     $scope.bills=[];
+    console.log(data);
     angular.forEach(tb,function(v,k){
       $scope.bills.push({
         date:k,

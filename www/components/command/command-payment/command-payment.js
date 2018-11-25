@@ -4,7 +4,7 @@
 
 app
 
-  .controller("CommandPaymentCtrl",function($scope,Bills,ToastApi,$filter,$ionicLoading,OmPayment,$cookies,$stateParams){
+  .controller("CommandPaymentCtrl",function($scope,Bills,ToastApi,$filter,$ionicLoading,OmPayment,$cookies,$stateParams,$timeout,$state){
 
     var bill_id=$stateParams.bill_id;
     var cashier_id=$stateParams.cashier_id;
@@ -37,18 +37,23 @@ app
 
     $scope.buyOM=function(){
       OmPayment.buy($scope.bill.id);
-    }
+    };
 
     $scope.buyCash=function(){
+      show($ionicLoading);
       Bills.getList({"should_paginate":false}).then(function (data) {
         var bill=$filter('filter')(data,{id: bill_id})[0];
         //console.log(data,bill,bill_id);
-        bill.status=3;
+        bill.status=2;
         bill.cashier_id=cashier_id;
         bill.put().then(function(f){
           //console.log("update",f);
+          hide($ionicLoading);
           $scope.statut= f.status;
-          ToastApi.success({msg:"Commande soldée"})
+          ToastApi.success({msg:"Commande soldée"});
+          $timeout(function(){
+            $state.go("app.command-list");
+          },5000);
         },function(q){
           console.log(q);
         });

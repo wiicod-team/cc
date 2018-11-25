@@ -14,8 +14,8 @@ filter
       {
         return "Echue";
       }
-      else if(statut=='waiting_customer_approval'){
-        return "En attente visa client";
+      else if(statut=='waiting_payment'){
+        return "En attente de paiement";
       }
       else if(statut=='waiting_cashier_approval'){
         return "En attente visa caisse";

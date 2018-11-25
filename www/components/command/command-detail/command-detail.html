@@ -37,18 +37,18 @@
     </div>
 
     <div class="list" style="margin-bottom: 60px;"
-         ng-if="can('comamnd.prepare') || can('bill.pay') || statut=='paided' || statut=='waiting_cashier_approval' || statut=='waiting_customer_approval'">
+         ng-if="can('comamnd.prepare') || can('bill.pay') || statut=='paided' || statut=='waiting_payment'">
       <div class="item" style="padding:0;">
 
         <div class="button-bar">
-          <a href="{{bills[0].bill.pdf_before_customer}}" ng-if="statut=='waiting_cashier_approval' || statut=='waiting_customer_approval' && bills[0].bill.pdf_before_customer!=undefined" class="class button button-primary">
+          <a href="{{bills[0].bill.pdf_before_customer}}" ng-if="statut=='waiting_payment' && bills[0].bill.pdf_before_customer!=undefined" class="class button button-primary">
             PDF
           </a>
           <a  href="{{bills[0].bill.pdf_after_cashier}}" ng-if="statut=='paided' && bills[0].bill.pdf_after_cashier!=undefined" class="class button button-primary">
             PDF
           </a>
           <a class="class button button-default"
-             ng-if="statut=='waiting_cashier_approval'"
+             ng-if="statut=='waiting_payment'"
              ng-click="cashIn(bills[0].bill)">
             Encaisser
           </a>
