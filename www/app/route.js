@@ -108,6 +108,16 @@ config.config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
+
+    .state('app.sponsoring', {
+      url: '/sponsoring',
+      views: {
+        'menuContent': {
+          templateUrl: 'sponsoring/sponsoring.html',
+          controller: 'SponsoringCtrl'
+        }
+      }
+    })
     .state('app.stock', {
       url: '/stock/:depot_id',
       views: {
