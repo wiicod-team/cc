@@ -1,10 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
 
-</body>
-</html>
+<ion-view view-title="Statistiques & Stocks">
+  <ion-content class="padding">
+
+    <div class="card" style="margin-top: 0;">
+      <div class="mu">
+        <div class="row">
+          <div class="col-80">
+
+          </div>
+          <div class="col-20">
+            <button class="button button-small button-primary" ng-click="refresh()"><strong>Actualiser</strong></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="mu">
+        <h3>
+          <span class="gold-value">700 000 Fcfa</span>
+        </h3>
+        Chiffre d'affaire du jour
+        <div class="divider"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="mu">
+        <h3>
+          <span class="gold-value">Pop-corn</span>
+        </h3>
+        Chiffre d'affaire de la semaine
+        <div class="divider"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="mu">
+        <h3>
+          <span class="gold-value">Pop-corn</span>
+        </h3>
+        Chiffre d'affaire du mois
+        <div class="divider"></div>
+      </div>
+    </div>
+
+
+    <div class="item item-divider">
+      <div class="row">
+        <div class="col-50">
+          Produit
+        </div>
+        <div class="col-20">
+          <span class="pull-right">Unité</span>
+        </div>
+        <div class="col-20">
+          <span class="pull-right">Qté</span>
+        </div>
+      </div>
+    </div>
+    <a class="item"
+       ng-repeat="s in stocks |orderBy :'-product_saletype.product.name':true"
+       style="padding: 5px 16px;"
+    >
+      <div class="row">
+        <div class="col-50">
+          <!--img src="{{s.product_saletype.product.picture}}" alt=""-->
+          {{s.product_saletype.product.name |limitTo : 17}}
+        </div>
+        <div class="col-20">
+          <span class="pull-right">{{s.product_saletype.unit}}</span>
+        </div>
+        <div class="col-20">
+          <span class="pull-right">{{s.quantity}}</span>
+        </div>
+      </div>
+
+
+
+    </a>
+
+
+
+  </ion-content>
+
+</ion-view>

@@ -146,7 +146,7 @@ config.config(function($stateProvider, $urlRouterProvider) {
       }
     })
     .state('app.statistic', {
-      url: '/statistic',
+      url: '/statistic/:depot_id',
       views: {
         'menuContent': {
           templateUrl: 'statistic/statistic.html',

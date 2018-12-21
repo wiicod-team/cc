@@ -1,0 +1,220 @@
+/* Empty. Add your own CSS if you like */
+ion-content, .pane{
+  background: #eee;
+}
+
+.pull-right{
+  float: right;
+}
+
+.pull-left{
+  float: left;
+}
+
+.menu-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #0055a0;
+  position: fixed;
+  bottom: 65px;
+  right: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.42, 0, 0, 1);
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+}
+.menu-button:hover {
+  background: #000;
+  color: #0055a0;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+.form-signin {
+  max-width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 3px solid #0055a0;
+  border-left:none;
+  border-right:none;
+}
+
+
+#tickets form .list{
+  background: transparent;
+}
+#tickets .item-input{
+  padding:6px 5px 5px 5px;
+  border:none;
+  border-bottom:1px solid #0055a0;
+}
+
+#tickets input{
+  color:#55606e;
+  padding: 2px;
+  background: transparent;
+  text-align: center;
+}
+
+#tickets form div.item{
+  border:none;
+  background: transparent;
+}
+
+.button.button-primary{
+  background: #fff;
+  color:#0055a0;
+}
+
+.mu h4{
+  background: #0055a0 !important;
+  color: #fff !important;
+}
+
+.navbar, .navbar.navbar-default,.button-group-raised .button.button-primary{
+  background: #000 !important;
+  color:#0055a0;
+}
+
+.button.button-primary:hover,.button.button-primary:focus{
+  background: #0055a0 !important;
+  color: #fff;
+}
+
+.button.button-danger{
+  background: #0055a0 !important;
+  color: #fff;
+}
+
+.button-default{
+  background: #0055a0 !important;
+  color: #fff;
+}
+.button-default:hover{
+  background: #fff !important;
+  color: #0055a0;
+}
+
+.button-default.no:hover{
+  background: #0055a0 !important;
+  color: #fff;
+}
+
+.item.active{
+
+}
+
+.list.card{
+  margin-top: 5px;
+}
+
+
+.item-divider{
+  background: #0055a0;
+  color:#fff;
+}
+
+.bar.bar-stable, .tabs{
+  background: #fff !important;
+  color: #0055a0;
+
+}
+
+.bar.bar-stable .title{
+  font-weight: bold;
+}
+
+.red-value{
+  color:#0055a0;
+}
+
+.gold-value{
+  color: #55606e;
+}
+
+
+.custom-marker{
+  padding: 7px;
+  background: black;
+  color: white;
+}
+
+.custom-marker.my1 {
+  font-size: 1.5em;
+  padding: 10px;
+  background: #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: #7F7F7F solid 1px;
+}
+
+.custom-marker.my1:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 6px 0;
+  border-color: #000 transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-left: -6px;
+  bottom: -6px;
+  left: 50%;
+}
+
+.custom-marker.my1:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 6px 0;
+  border-color: #7F7F7F transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-left: -6px;
+  bottom: -7px;
+  left: 50%;
+}
+
+.custom-marker.my2 {
+  font-size: 1.5em;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: #0055a0 solid 1px;
+  background: #0055a0 ;
+}
+
+.custom-marker.my2:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 6px 0;
+  border-color: #0055a0  transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-left: -6px;
+  bottom: -6px;
+  left: 50%;
+}
+
+.custom-marker.my2:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 7px 6px 0;
+  border-color: #7F7F7F transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-left: -6px;
+  bottom: -7px;
+  left: 50%;
+}
